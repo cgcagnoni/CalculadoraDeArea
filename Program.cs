@@ -13,11 +13,12 @@ namespace calculadoraDeArea
             Console.WriteLine("Cálculo de área" + Environment.NewLine);
             Console.WriteLine("Indique o número da opção da forma geométrica correspondente para cálculo de área:");
             Console.WriteLine("1- Círculo");
-            Console.WriteLine("2- Quadrado");
-            Console.WriteLine("3- Retângulo");
-            Console.WriteLine("4- Trapézio");
-            Console.WriteLine("5- Triângulo retângulo");
-            Console.WriteLine("6- Sair" + Environment.NewLine);
+            Console.WriteLine("2- Losango");
+            Console.WriteLine("3- Quadrado");
+            Console.WriteLine("4- Retângulo");
+            Console.WriteLine("5- Trapézio");
+            Console.WriteLine("6- Triângulo");
+            Console.WriteLine("7- Sair" + Environment.NewLine);
 
             int opcaoUsuario = int.Parse(Console.ReadLine());
 
@@ -28,22 +29,26 @@ namespace calculadoraDeArea
                     circulo.areaCirculo();
                     break;
                 case 2:
+                    Calculadora losango = new Calculadora();
+                    losango.areaLosango();
+                    break;
+                case 3:
                     Calculadora quadrado = new Calculadora();
                     quadrado.areaQuadrado();
                     break;
-                case 3:
+                case 4:
                     Calculadora retangulo = new Calculadora();
                     retangulo.areaRetangulo();
                     break;
-                case 4:
+                case 5:
                     Calculadora trapezio = new Calculadora();
                     trapezio.areaTrapezio();
                     break;
-                case 5:
-                    Calculadora trianguloRet = new Calculadora();
-                    trianguloRet.areaTrianguloRetangulo();
-                    break;
                 case 6:
+                    Calculadora trianguloRet = new Calculadora();
+                    trianguloRet.areaTriangulo();
+                    break;
+                case 7:
                     Console.WriteLine("Encerrando o sistena..." + Environment.NewLine);
                     break;
                 default:
